@@ -92,7 +92,7 @@ nav {
     background: #76a42b; // Green
     color: #fdfaf8; // Warm Off-White
     padding: 0.4rem 0.8rem;
-    border-radius: 3px;
+    border-radius: 5px;
     text-transform: uppercase;
     &:hover {
       background: #656565; // Grey
@@ -121,6 +121,7 @@ nav {
 
 #headshot {
   width: 33%;
+  border-radius: 10%;
   float: right;
   margin-left: 1rem;
 }
