@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+// Include normalize.css untouched and build upon it. 
+@import "normalize";
+
+// ======================================================================
+// Base Styling for All Pages
+// ======================================================================
+
+// HTML font size is set to 62.5% so that, throughout the rest of the 
+// stylesheet, 1rem = 10px, 2rem = 20px, etc., assuming default browser 
+// font size of 16px.
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #fdfaf8; // Warm Off-White
+  color: #656565; // Grey
+  font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+h1 {
+  color: #656565; // Grey
+  font-size: 4.0rem;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+p.small_print {
+  font-size: 1.2rem;
+}
+
+// .column1 {
+//   width: 50%;
+// }
+// .column2 {
+//   width: 50%;
+// }
+
+// ======================================================================
+// Header / Navigation
+// ======================================================================
+
+.header_container {
+  padding: 2rem 4rem 2rem 4rem;
+  box-shadow: -1px 2px 0px 1px #656565; // Grey
+}
+
+.header {
+  // Restrict max width of header, and center it
+  max-width: 1080px;
+  margin-left:auto;
+  margin-right:auto;
+  // Define flexbox (row w/ nowrap; justify across row; align bottom)
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.logo img {
+  height: 6rem;
+}
+
+nav {
+  // TODO: Responsive menu
+  font-size: 2rem;
+  display: block;
+
+  ul {
+    list-style: none;
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+    padding: 0rem 1rem 0rem 1rem;
+  }
+
+  a {
+    color: #656565; // Grey
+  }
+
+  a.call_to_action {
+    background: #76a42b; // Green
+    color: #fdfaf8; // Warm Off-White
+    padding: 0.4rem 0.8rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    &:hover {
+      background: #656565; // Grey
+      transition: all 0.2s linear;
+    }
+  }
+}
+
+// ======================================================================
+// Body Content
+// ======================================================================
+
+.body_container {
+  padding: 0rem 4rem 2rem 4rem;
+  // Restrict max width of body, and center it
+  max-width: 1080px;
+  margin-left:auto;
+  margin-right:auto;
+
+  a {
+    color: #2b76a4;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+#headshot {
+  width: 33%;
+  float: right;
+  margin-left: 1rem;
+}
+
+// .welcome {
+//   -webkit-animation-name: welcome;
+//   -webkit-animation-duration: .9s;
+// }
+
+// @-webkit-keyframes welcome {
+//   from {
+//     -webkit-transform: scale(0);
+//     opacity: 0;
+//   }
+//   50% {
+//    -webkit-transform: scale(0);
+//    opacity: 0;
+//   }
+//   82.5% {
+//     -webkit-transform: scale(1.03);
+//     -webkit-animation-timing-function: ease-out;
+//     opacity: 1;
+//   }
+//   to {
+//     -webkit-transform: scale(1);
+//   }
+// }
+
+// ======================================================================
+// Footer Content
+// ======================================================================
+
+.footer_container {
+  background: #2b76a4; // Blue
+  color: #fdfaf8; // Warm Off-White
+  min-height: 2rem;
+  padding: 1rem 4rem 1rem 4rem;
+  box-shadow: 0px -3px 0px 0.2rem #76a42b; // Green
+
+  a {
+    color: #fdfaf8; // Warm Off-White
+    text-decoration: none;
+  }
+}
+
+.footer {
+  // Restrict max width of header, and center it
+  max-width: 1080px;
+  margin-left:auto;
+  margin-right:auto;
+  // Define flexbox (row w/ nowrap; justify across row; align bottom)
+  // display: flex;
+  // flex-flow: row nowrap;
+  // justify-content: space-between;
+  // align-items: flex-start;
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+    list-style-type: none;
+  }
+
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+  <head>
+    <!-- Title -->
+    <title><%= current_page.data.title || "Barbara Carradini" %></title>
+    <%= favicon_tag 'images/bcarradini-favicon-32x32.png' %>
+
+    <!-- Links -->
+    <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' />
+    <%= stylesheet_link_tag :site %>
+
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" /> 
+        <!-- TODO: Decide if you really want apple-mobile-web-app-capable. 
+             Goes with "Mobile Safari in standalone mode" snippet in head.js -->
+
+    <!-- Scripts (before page is loaded) -->
+    <%= javascript_include_tag :head %>
+
+    <!-- Set base target for all links to _blank -->
+    <base target="_blank">
+  </head>
+
+  <body class="<%= page_classes %>">
+
+    <!-- Render Common Header -->
+    <%= partial "header" %>
+
+    <!-- Yield to Page HTML -->
+    <%= yield %>
+
+    <!-- Render Common Footer -->
+    <%= partial "footer" %>
+
+  </body>
+
+</html>
