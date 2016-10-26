@@ -1,15 +1,19 @@
 <header>
       <div class="header_container">
         <div class="header">
+
           <div class="logo">
-            <%= link_to image_tag("bcarradini-logo.svg", alt: "B Carradini Logo"), "#{ENV['BASE_URL']}", target: "_self" %>
+            <%= link_to image_tag("bcarradini-logo.png", alt: "B Carradini Logo"), "#{ENV['BASE_URL']}", target: "_self" %>
           </div><!-- .logo -->
-          <nav>
-            <ul>
+
+          <nav class="main_nav" id="main_nav">
+            <ul id="main_menu">
               <li><%= link_to "About Me", "#{ENV['BASE_URL']}/about", target: "_self" %></li>
               <li><%= link_to "Connect", "#{ENV['BASE_URL']}/connect", target: "_self", class: "call_to_action" %></li>
             </ul>
-          </nav><!-- .nav -->
+            <a id="mobile_menu_button" class="mobile_menu_button" onclick="expandMobileMenu()">&#9776;</a>
+          </nav><!-- .main_nav #main_nav -->
+
         </div><!-- .header -->
       </div><!-- .header_container -->
     </header>

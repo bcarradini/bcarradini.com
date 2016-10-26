@@ -26,3 +26,17 @@ if(("standalone" in window.navigator) && window.navigator.standalone){
   
   },false);
 }
+
+// ======================================================================
+// Expanding and Collapsing Mobile Menu
+// ======================================================================
+function expandMobileMenu() {
+ document.getElementById("main_menu").classList.toggle("expand_mobile_menu");
+}
+// Collapse menu if user clicks anywhere else but the mobile menu button
+window.onclick = function(event) {
+  if (!event.target.matches('.mobile_menu_button')) {
+    document.getElementById("main_menu").classList.remove("expand_mobile_menu");
+  }
+}
+

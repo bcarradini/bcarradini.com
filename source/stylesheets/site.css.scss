@@ -4,6 +4,20 @@
 @import "normalize";
 
 // ======================================================================
+// Helpful Variables
+// ======================================================================
+$color-grey: #656565;
+$color-blue: #2b76a4;
+$color-green: #76a42b;
+$color-offwhite: #fdfaf8;
+
+$width-mobile: 400px;
+$width-phablet: 550px;
+$width-tablet: 800px;
+$width-desktop: 1000px;
+$width-desktop-hd: 2400px;
+
+// ======================================================================
 // Base Styling for All Pages
 // ======================================================================
 
@@ -15,18 +29,13 @@ html {
 }
 
 body {
-  background: #fdfaf8; // Warm Off-White
-  color: #656565; // Grey
+  background: $color-offwhite;
+  color: $color-grey;
   font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.7rem;
   font-weight: 400;
   line-height: 1.4;
-}
-
-h1 {
-  color: #656565; // Grey
-  font-size: 4.0rem;
-  font-weight: 600;
+  font-size: 1.7rem;
+    @media (max-width: $width-tablet) { font-size: 1.4rem; }
 }
 
 a {
@@ -50,7 +59,8 @@ p.small_print {
 
 .header_container {
   padding: 2rem 4rem 2rem 4rem;
-  box-shadow: -1px 2px 0px 1px #656565; // Grey
+    @media (max-width: $width-tablet) { padding: 2rem 2rem 1rem 2rem; }
+  box-shadow: -1px 2px 0px 1px $color-grey;
 }
 
 .header {
@@ -58,46 +68,88 @@ p.small_print {
   max-width: 1080px;
   margin-left:auto;
   margin-right:auto;
+
   // Define flexbox (row w/ nowrap; justify across row; align bottom)
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .logo img {
   height: 6rem;
+    @media (max-width: $width-phablet) { height: 3rem; }
 }
 
-nav {
-  // TODO: Responsive menu
+.main_nav {
   font-size: 2rem;
-  display: block;
 
   ul {
     list-style: none;
     list-style-type: none;
   }
 
+  #main_menu { display: block }
+  #mobile_menu_button { display: none }
+    // Hide main menu on mobile and display mobile menu button
+    @media (max-width: $width-tablet) { 
+      #main_menu {display: none} 
+      #mobile_menu_button {font-size: 4rem; display: block;}
+    }
+    @media (max-width: $width-phablet) { 
+      #mobile_menu_button {font-size: 3rem;}
+    }
+}
+
+#main_menu:not(.expand_mobile_menu) {
+  font-size: 2rem;
+  
   li {
     display: inline-block;
     padding: 0rem 1rem 0rem 1rem;
   }
 
   a {
-    color: #656565; // Grey
+    color: $color-grey;
   }
 
   a.call_to_action {
-    background: #76a42b; // Green
-    color: #fdfaf8; // Warm Off-White
+    background: $color-green;
+    color: $color-offwhite;
     padding: 0.4rem 0.8rem;
     border-radius: 5px;
     text-transform: uppercase;
     &:hover {
-      background: #656565; // Grey
+      background: $color-grey;
       transition: all 0.2s linear;
     }
+  }
+}
+
+#main_menu.expand_mobile_menu {
+  display: block !important; 
+  font-size: 1.6rem;
+  text-align: right;
+
+  // Position in front of body, underneath mobile menu button
+  z-index: 100;
+  position: absolute;
+  right: 1.9rem;
+  top: 7.7rem;
+    @media (max-width: $width-phablet) { top: 5.5rem; }
+
+  li {
+    background: $color-blue;
+    border: 1px solid $color-offwhite; 
+  }
+  li:last-of-type {
+    background: $color-green;
+  }
+
+  a {
+    color: $color-offwhite;
+    display: inline-block;
+    padding: 1rem 4rem 1rem 4rem;
   }
 }
 
@@ -106,7 +158,9 @@ nav {
 // ======================================================================
 
 .body_container {
-  padding: 0rem 4rem 2rem 4rem;
+  padding: 0rem 4rem 2rem 4rem; 
+    @media (max-width: $width-tablet) { padding: 0rem 2rem 1rem 2rem; }
+
   // Restrict max width of body, and center it
   max-width: 1080px;
   margin-left:auto;
@@ -155,14 +209,16 @@ nav {
 // ======================================================================
 
 .footer_container {
-  background: #2b76a4; // Blue
-  color: #fdfaf8; // Warm Off-White
+  background: $color-blue;
+  color: $color-offwhite;
   min-height: 2rem;
   padding: 1rem 4rem 1rem 4rem;
-  box-shadow: 0px -3px 0px 0.2rem #76a42b; // Green
+    @media (max-width: $width-tablet) { padding: 0.5rem 2rem 0.5rem 2rem; }
+
+  box-shadow: 0px -3px 0px 0.2rem $color-green;
 
   a {
-    color: #fdfaf8; // Warm Off-White
+    color: $color-offwhite;
     text-decoration: none;
   }
 }
@@ -172,11 +228,6 @@ nav {
   max-width: 1080px;
   margin-left:auto;
   margin-right:auto;
-  // Define flexbox (row w/ nowrap; justify across row; align bottom)
-  // display: flex;
-  // flex-flow: row nowrap;
-  // justify-content: space-between;
-  // align-items: flex-start;
 
   ul {
     padding-left: 0;
