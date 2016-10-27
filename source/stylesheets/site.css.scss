@@ -46,28 +46,38 @@ p.small_print {
   font-size: 1.2rem;
 }
 
-// .column1 {
-//   width: 50%;
-// }
-// .column2 {
-//   width: 50%;
-// }
+.blue_banner {
+  background: $color-blue;
+  color: $color-offwhite;
+  min-height: 3rem;
+    @media (max-width: $width-phablet) { min-height: 2rem; }
+}
+
+.green_top_border {
+  box-shadow: 0px -2px 0px 0.2rem $color-green;
+}
+
+.content_container {
+  // Restrict max width of content container, and center it
+  max-width: 1080px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#slogan {
+  text-align: center;
+  font-size: 5rem;
+    @media (max-width: $width-phablet) { font-size: 3rem; }
+}
 
 // ======================================================================
 // Header / Navigation
 // ======================================================================
 
 .header_container {
+  // box-shadow: -1px 2px 0px 1px $color-grey;
   padding: 2rem 4rem 2rem 4rem;
-    @media (max-width: $width-tablet) { padding: 2rem 2rem 1rem 2rem; }
-  box-shadow: -1px 2px 0px 1px $color-grey;
-}
-
-.header {
-  // Restrict max width of header, and center it
-  max-width: 1080px;
-  margin-left:auto;
-  margin-right:auto;
+    @media (max-width: $width-tablet) { padding: 2rem 2rem 2rem 2rem; }
 
   // Define flexbox (row w/ nowrap; justify across row; align bottom)
   display: flex;
@@ -78,7 +88,7 @@ p.small_print {
 
 .logo img {
   height: 6rem;
-    @media (max-width: $width-phablet) { height: 3rem; }
+    @media (max-width: $width-phablet) { height: 3.25rem; }
 }
 
 .main_nav {
@@ -161,11 +171,6 @@ p.small_print {
   padding: 0rem 4rem 2rem 4rem; 
     @media (max-width: $width-tablet) { padding: 0rem 2rem 1rem 2rem; }
 
-  // Restrict max width of body, and center it
-  max-width: 1080px;
-  margin-left:auto;
-  margin-right:auto;
-
   a {
     color: #2b76a4;
     font-weight: 600;
@@ -182,7 +187,7 @@ p.small_print {
 
 // .welcome {
 //   -webkit-animation-name: welcome;
-//   -webkit-animation-duration: .9s;
+//   -webkit-animation-duration: .7s;
 // }
 
 // @-webkit-keyframes welcome {
@@ -209,25 +214,8 @@ p.small_print {
 // ======================================================================
 
 .footer_container {
-  background: $color-blue;
-  color: $color-offwhite;
-  min-height: 2rem;
   padding: 1rem 4rem 1rem 4rem;
     @media (max-width: $width-tablet) { padding: 0.5rem 2rem 0.5rem 2rem; }
-
-  box-shadow: 0px -3px 0px 0.2rem $color-green;
-
-  a {
-    color: $color-offwhite;
-    text-decoration: none;
-  }
-}
-
-.footer {
-  // Restrict max width of header, and center it
-  max-width: 1080px;
-  margin-left:auto;
-  margin-right:auto;
 
   ul {
     padding-left: 0;
@@ -235,4 +223,8 @@ p.small_print {
     list-style-type: none;
   }
 
+  a {
+    color: $color-offwhite;
+    text-decoration: none;
+  }
 }

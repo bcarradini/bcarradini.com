@@ -1,16 +1,16 @@
 <header>
-  <div class="header_container">
-    <div class="header">
-      <div class="logo">
-        <%= link_to image_tag("bcarradini-logo.png", alt: "B Carradini Logo"), "#{ENV['BASE_URL']}", target: "_self" %>
-      </div><!-- .logo -->
-      <nav class="main_nav" id="main_nav">
-        <ul id="main_menu">
-          <li><%= link_to "About Me", "#{ENV['BASE_URL']}/about", target: "_self" %></li>
-          <li><%= link_to "Connect", "#{ENV['BASE_URL']}/connect", target: "_self", class: "call_to_action" %></li>
-        </ul>
-        <a id="mobile_menu_button" class="mobile_menu_button" onclick="expandMobileMenu()">&#9776;</a>
-      </nav><!-- .main_nav #main_nav -->
-    </div><!-- .header -->
+  <div class="header_container content_container">
+    <div class="logo">
+      <%= link_to image_tag("bcarradini-logo.png", alt: "B Carradini Logo"), "#{ENV['BASE_URL']}", target: "_self" %>
+    </div><!-- .logo -->
+    <nav class="main_nav" id="main_nav">
+      <ul id="main_menu">
+        <li><%= link_to "About Me", "#{ENV['BASE_URL']}/about", target: "_self" %></li>
+        <li><%= link_to "My Work", "#{ENV['BASE_URL']}/work", target: "_self" %></li>
+        <li><%= link_to "Connect", "#{ENV['BASE_URL']}/connect", target: "_self", class: "call_to_action" %></li>
+      </ul>
+      <a id="mobile_menu_button" class="mobile_menu_button" onclick="expandMobileMenu()">&#9776;</a>
+    </nav><!-- .main_nav #main_nav -->
   </div><!-- .header_container -->
+  <div class="blue_banner green_top_border"></div>
 </header>
