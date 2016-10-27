@@ -30,10 +30,18 @@ if(("standalone" in window.navigator) && window.navigator.standalone){
 // ======================================================================
 // Expanding and Collapsing Mobile Menu
 // ======================================================================
+
 function expandMobileMenu() {
  document.getElementById("main_menu").classList.toggle("expand_mobile_menu");
 }
+
 // Collapse menu if user clicks anywhere else but the mobile menu button
+//   NOTE: I know this won't necessarily work on mobile devices using taps
+//         instead of clicks, and I don't care. The user can still use the
+//         actual mobile menu button to collapse the menu. If I ever want
+//         to get more sophisticated:
+//           https://www.html5rocks.com/en/mobile/touchandmouse/
+//           http://stackoverflow.com/questions/13358292/capture-tap-event-with-pure-javascript
 window.onclick = function(event) {
   if (!event.target.matches('.mobile_menu_button')) {
     document.getElementById("main_menu").classList.remove("expand_mobile_menu");

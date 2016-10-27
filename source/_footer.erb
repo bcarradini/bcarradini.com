@@ -1,20 +1,20 @@
 <footer>
-      <div class="footer_container">
-        <div class="footer">
-          <div>
-            <p><h3>CONNECT</h3></p>
-            <ul class="footer_icons">
-              <li><%= link_to "LinkedIn", ENV['ID_LINKEDIN'] %></li>
-              <li><%= link_to "GitHub", ENV['ID_GITHUB'] %></li>
-              <li><%= link_to "Email", ENV['MAILTO_ID_EMAIL'] %></li>
-            </ul>
-          </div>
-          <div>
-            <p class="small_print"><br>Barbara Carradini &#169; <%= Time.now.year %>. All Rights Reserved.</p>
-          </div>
-        </div><!-- .footer -->
-      </div><!-- .footer_container -->
+  <div class="footer_container">
+    <div class="footer">
+      <div>
+        <p><h3>CONNECT</h3></p>
+        <ul class="footer_icons">
+          <li><%= link_to "LinkedIn", ENV['ID_LINKEDIN'] %></li>
+          <li><%= link_to "GitHub", ENV['ID_GITHUB'] %></li>
+          <li><%= link_to "Email", ENV['MAILTO_ID_EMAIL'] %></li>
+        </ul>
+      </div>
+      <div>
+        <p class="small_print"><br>Barbara Carradini &#169; <%= Time.now.year %>. All Rights Reserved.</p>
+      </div>
+    </div><!-- .footer -->
+  </div><!-- .footer_container -->
 
-      <!-- Scripts (after page is loaded) -->
-      <%= javascript_include_tag :foot %>
-    </footer>
+  <!-- Scripts (after page is loaded) -->
+  <%= javascript_include_tag :foot %>
+</footer>
