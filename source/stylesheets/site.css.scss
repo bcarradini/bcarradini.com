@@ -59,9 +59,9 @@ p.small_print {
 
 .content_container {
   // Restrict max width of content container, and center it
-  max-width: 1080px;
-  margin-left:auto;
-  margin-right:auto;
+  max-width: 800px;
+  margin-left: 32px;
+  margin-right: auto;
 }
 
 #slogan {
@@ -116,7 +116,7 @@ p.small_print {
   
   li {
     display: inline-block;
-    padding: 0rem 1rem 0rem 1rem;
+    // padding: 0rem 1rem 0rem 1rem;
   }
 
   a {
@@ -180,34 +180,10 @@ p.small_print {
 
 #headshot {
   width: 33%;
-  border-radius: 10%;
+  border-radius: 3%;
   float: right;
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
-
-// .welcome {
-//   -webkit-animation-name: welcome;
-//   -webkit-animation-duration: .7s;
-// }
-
-// @-webkit-keyframes welcome {
-//   from {
-//     -webkit-transform: scale(0);
-//     opacity: 0;
-//   }
-//   50% {
-//    -webkit-transform: scale(0);
-//    opacity: 0;
-//   }
-//   82.5% {
-//     -webkit-transform: scale(1.03);
-//     -webkit-animation-timing-function: ease-out;
-//     opacity: 1;
-//   }
-//   to {
-//     -webkit-transform: scale(1);
-//   }
-// }
 
 // ======================================================================
 // Footer Content

@@ -29,7 +29,7 @@
   <body class="<%= page_classes %>">
 
     <!-- Render Common Header -->
-    <%= partial "header" %>
+    <%= partial "header", locals: { page: current_page.data.page } %>
 
     <!-- Yield to Page HTML -->
     <%= yield %>

@@ -6,7 +6,11 @@
 
     <nav class="main_nav" id="main_nav">
       <ul id="main_menu">
+        <% if page == "connect" %>
+        <li><%= link_to "About", "#{ENV['BASE_URL']}", target: "_self", class: "call_to_action" %></li>
+        <% else %>
         <li><%= link_to "Connect", "#{ENV['BASE_URL']}/connect", target: "_self", class: "call_to_action" %></li>
+        <% end %>
       </ul>
 
       <a id="mobile_menu_button" class="mobile_menu_button" onclick="expandMobileMenu()">&#9776;</a>
